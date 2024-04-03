@@ -11,8 +11,8 @@ import { RouterOutlet } from '@angular/router';
 export class AppComponent {
   title = 'angular-project';
 
-  name: string = 'Jorge';
-  age: number = 32;
+  name: string = 'Marcos';
+  age: number = 17;
   friends: Array<string> = ["2", "3"];
   random: Array<any> = ["Hola", true, 25];
 
@@ -21,7 +21,12 @@ export class AppComponent {
   data2: number = 0;
 
   ngOnInit() {
-    this.executets();
+    // this.executeBoolean();
+    this.executeLoop();
+  }
+  
+  constructor() {
+    console.log (this.data1)
   }
 
   public setData1(event: any) {
@@ -48,9 +53,9 @@ export class AppComponent {
     }
   }
 
-  executets() {
+  executeBoolean() {
     const nombre: string = "Marcos";
-    const numero: number = 18;
+    const numero: number = 17;
     const arrayNumero: number[] = [5, 21, -1, 3030, 7];
     const trueFalse: boolean = true;
     const trueFalseArray: boolean[] = [true, false, true];
@@ -97,6 +102,17 @@ export class AppComponent {
 
   }
 
+  executeLoop() {
+    const arrLoopEx: string[] = ["Hola", "Mundo", "hola otra vez", "Clase", "5"];
+    for (let index = 0; index < arrLoopEx.length; index) {
+      const element = arrLoopEx[index];
+      console.log(element);
+    }
+  }
 
+  executeIfLoop() {
+    const arrComp1:any[] = ["Hola", "2", 2, true, false, "mundo"];
+    const arrComp2:any[] = ["Heybabie", "no me llames", 2, true, 33, undefined, "A"];
+  }
 
 }
